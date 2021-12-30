@@ -16,5 +16,9 @@ export class AppComponent {
       return false;
     }
   }
+  
+  onCreateUsername(event: Event) {
+    this.username = (<HTMLInputElement>event.target).value;
+  }
 
 }
