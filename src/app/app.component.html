@@ -8,8 +8,12 @@
 <hr>
 
 <label for="username">Enter the username</label>
+
+<!-- two ways binding: get username from typescript and when user type a text on html send it to username typescript. -->
 <p><input type="text" class="form-control" [(ngModel)] = "username"></p>
 
+<!-- string interpolation -->
 <p>{{ username }}</p>
 
-<button class="btn btn primary" (click) = "onCreateUsername()">Add username</button>
+<!-- property binding -->
+<button class="btn btn primary" [disabled] = "isButtonDisabled()">Add username</button>

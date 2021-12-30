@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { empty } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  username = 'Enter a username';
+  username: string = '';
+
+  isButtonDisabled() {
+    if (this.username === null || this.username === '') {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
 }
