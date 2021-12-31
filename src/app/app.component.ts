@@ -18,7 +18,7 @@ export class AppComponent {
   }
   
   onCreateUsername(event: Event) {
-    this.username = (<HTMLInputElement>event.target).value;
+    this.username = '';
   }
 
 }
